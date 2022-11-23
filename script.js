@@ -1,22 +1,19 @@
-// 
+// 16x16 grid
+// hover effect so grid divs change color leaving trail thru grid
+// prompt asking squares for new grid, from 16x16 to 100x100 > always inside same size
+//
+// document.getElementById(`class`).innerHTML = variable;
 
-document.getElementById('playersc').innerHTML = playerScore;
-document.getElementById('computersc').innerHTML = computerScore;
+let container = document.querySelector(`.container`);
 
-let combatText = document.querySelector('.roundtext');
-let buttons = document.querySelectorAll('button');
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const img = button.querySelector('img');
-    playerSelection = img.alt.toLowerCase();
-
-    playRound(playerSelection, computerSelection);
-
-    if (playerScore === 5 || computerScore === 5) {
-      checkWinner();
-    }
+container.forEach((div) => {
+  div.addEventListener('click', () => {
+    // code
   });
 });
 
-//
+container.forEach((div) => {
+  div.addEventListener('hoover', () => {
+    // code
+  });
+});
