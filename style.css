@@ -18,28 +18,33 @@ h1 {
 }
 
 header {
-    display: flex;
     background-color: darkgray;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
     width: 100%;
     color: black;
-    font-size: 10px;
-    margin-bottom: 30px;
+    font-size: 9px;
+    margin-bottom: auto;
 }
 
 footer {
-    display: flex;
     background-color: darkgray;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
     width: 100%;
-    bottom: 0;
     color: black;
     font-size: 10px;
-    margin-top: 30px;
+    margin-top: auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .url {

@@ -18,7 +18,7 @@ let startBUTTON = document.getElementById(`start`).addEventListener
 
 function start() {
   clear();
-  prompt("something with arrays to take a and b");
+  prompt(`something with arrays to take a and b`);
   // use those to run;
   container.canvas(a, b);
 }
@@ -27,7 +27,7 @@ function start() {
 
 let clear = document.getElementById(`clear`);
     clear.onclick = function(){
-     var elements = document.getElementsByClassName('.container');
+     var elements = document.getElementsByClassName(`.container`);
         for (var i = 0; i < elements.length; i++) {
 
           elements[i].removeChild();
