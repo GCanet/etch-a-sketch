@@ -9,14 +9,12 @@ let newP = document.createElement(`p`);
 newP.setAttribute(`class`, `gridp`)
 
 let NEWROW = document.container.appendChild(newDiv);
-let NEWCHILD = queryselectorAll(`.container.div`).newP
+let NEWCHILD = queryselectorAll(`.container > div`).appendChild(newP);
 
 // start button & clear button functions
 
 let startBUTTON = document.getElementById(`start`).addEventListener
 (`click`, start());
-let clearBUTTON = document.getElementById(`clear`).addEventListener
-(`click`, clear());
 
 function start() {
   clear();
@@ -25,8 +23,13 @@ function start() {
   container.canvas(a, b);
 }
 
-function clear() {
-  // code to clear canvas respecting last size
+let clear = document.getElementById(`clear`);
+    clear.onclick = function(){
+     var elements = document.getElementsByClassName('.container');
+        for (var i = 0; i < elements.length; i++) {
+
+          elements[i].removeChild();
+        }
 }
 
 // drawing the grid function
@@ -42,7 +45,7 @@ function canvas(a, b) {
   }
   if (a > 100 || b > 100) {
     alert(`The number needs to be lower than 100.`);
-    clear();
+    clear++;
   }
 }
 
