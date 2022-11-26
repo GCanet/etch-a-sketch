@@ -29,8 +29,8 @@ let clearBUTTON = document.getElementById(`clear`).addEventListener
 
 function canvas(a, b) {
   if (
-    (a < 100 == b < 100) ||
-    (a > 15 == b > 15) 
+    (a < 100 && b < 100) ||
+    (a > 15 && b > 15) 
     ){
       for (let i = 0; i < a; i++) {
         newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
