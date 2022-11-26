@@ -1,13 +1,11 @@
 let container = document.querySelector(`.container`);
-let newchild = document.querySelectorAll(`.gridDivs`);
 
 // start button
 
 function start() {
-  var numbers = prompt("Enter two equal numbers (max value: 100) separated by x: ", "");
-  let a = numbers.split("x")[0];
-  let b = numbers.split("x")[1];
-  canvas(a, b);
+  let numbers = prompt("Enter a number from 16 to 100: ", "");
+  let a = numbers;
+  canvas(a);
 }
 
 let startBUTTON = document.getElementById(`start`).addEventListener
@@ -27,44 +25,37 @@ let clearBUTTON = document.getElementById(`clear`).addEventListener
 
 // drawing the grid function
 
-function canvas(a, b) {
-  if (
-    (a < 100 && b < 100) ||
-    (a > 15 && b > 15) 
-    ){
-      for (let i = 0; i < a; i++) {
-        newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
+function canvas(a) {
+  let total = (a * a) + a
+  let mod = a + 1;
+
+  if (a < 100 || a > 15) {
+      for (let i = 0; i < total; i++) {
+        let div = document.createElement('div');
+
+        if (i % mod === 0) {
+          div.style.cssText = "border: 1px solid black";
+        } else {
+          div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
+        }
+        container.appendChild(div).setAttribute(`class`, `gridDivs`);
       }
-      for (let i = 0; i < b; i++) {
-        container.appendChild(document.createElement(`div`)).setAttribute(`class`, `gridDivs`);
-      }
-  }
-  if (
-    (a > 100 && b > 100) ||
-    (a < 15 && b < 15) 
-    ){
+  if (a > 100 || a < 15) {
       alert(`Number has to be lower than 100 and higher than 15.`);
+     }
   }
 }
 
 // click to black and hoover gray tail
 
-let paintgrid = document.getElementByClass(`.gridDivs`).addEventListener
+let newchild = document.getElementsByClassName(`.gridDivs`);
+
+let paintgrid = newchild.addEventListener
 (`click`, () => {
     paintgrid.style.backgroundColor = `black`;
   });
 
-let paintp = document.getElementByClass(`.gridp`).addEventListener
-(`click`, () => {
-    paintp.style.backgroundColor = `black`;
-  });
-
-let hooverdiv = document.getElementByClass(`.gridDivs`).addEventListener
+let hooverdiv = newchild.addEventListener
 (`hoover`, () => {
     hooverdiv.style.backgroundColor = `gray`;
-  });
-
-let hooverp = document.getElementByClass(`.gridp`).addEventListener
-(`hoover`, () => {
-    hooverp.style.backgroundColor = `gray`;
   });
