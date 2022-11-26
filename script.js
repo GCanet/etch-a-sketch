@@ -56,7 +56,7 @@ let paintgrid = document.getElementByClass(`.gridDivs`).addEventListener
 
 let paintp = document.getElementByClass(`.gridp`).addEventListener
 (`click`, () => {
-    paintgrid.style.backgroundColor = `black`;
+    paintp.style.backgroundColor = `black`;
   });
 
 let hooverdiv = document.getElementByClass(`.gridDivs`).addEventListener
