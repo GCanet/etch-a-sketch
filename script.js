@@ -33,10 +33,10 @@ function canvas(a, b) {
     (a > 15 || b > 15) 
     ){
       for (let i = 0; i < a; i++) {
-        document.newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
+        newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
       }
       for (let i = 0; i < b; i++) {
-        document.container.appendChild(document.createElement(`div`)).setAttribute(`class`, `gridDivs`);
+        container.appendChild(document.createElement(`div`)).setAttribute(`class`, `gridDivs`);
       }
   }
   if (
