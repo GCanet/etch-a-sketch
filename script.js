@@ -1,9 +1,7 @@
 let container = document.querySelector(`.container`);
+let newchild = document.querySelectorAll(`.gridDivs`);
 
 // start button
-
-let startBUTTON = document.getElementById(`start`).addEventListener
-(`click`, start());
 
 function start() {
   var numbers = prompt("Enter two numbers (max: 100) separated by x: ", "");
@@ -11,10 +9,11 @@ function start() {
   let b = numbers.split("x")[1];
   canvas(a, b);
 }
-// clear button
 
-let clearBUTTON = document.getElementById(`clear`).addEventListener
-(`click`, clear());
+let startBUTTON = document.getElementById(`start`).addEventListener
+(`click`, start());
+
+// clear button
 
 function clear() {
   var elements = document.getElementsByClassName(`.container`);
@@ -24,19 +23,18 @@ function clear() {
   }
 }
 
+let clearBUTTON = document.getElementById(`clear`).addEventListener
+(`click`, clear());
+
 // drawing the grid function
 
 function canvas(a, b) {
   if (a == b) {
     for (let i = 0; i < a; i++) {
-      let newP = document.createElement(`p`);
-      newP.setAttribute(`class`, `gridp`);
-      let NEWCHILD = document.queryselectorAll(`.container-div`).appendChild(document.createElement('p'));
+      document.newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
     }
     for (let i = 0; i < b; i++) {
-      let newDiv = document.createElement(`div`);
-      newDiv.setAttribute(`class`, `gridDivs`);
-      let NEWROW = document.container.appendChild(document.createElement('div'));
+      document.container.appendChild(document.createElement(`div`)).setAttribute(`class`, `gridDivs`);
     }
   }
   if (a > 100 || b > 100) {
