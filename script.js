@@ -6,22 +6,22 @@ let startBUTTON = document.getElementById(`start`).addEventListener
 (`click`, start());
 
 function start() {
-  clear();
   var numbers = prompt("Enter two numbers (max: 100) separated by x: ", "");
   let a = numbers.split("x")[0];
   let b = numbers.split("x")[1];
   canvas(a, b);
 }
-
 // clear button
 
-let clear = document.getElementById(`clear`);
-clear.onclick = function clear(){
+let clearBUTTON = document.getElementById(`clear`).addEventListener
+(`click`, clear());
+
+function clear() {
   var elements = document.getElementsByClassName(`.container`);
     for (var i = 0; i < elements.length; i++) {
 
-      elements[i].removeChild();
-    }
+    elements[i].removeChild();
+  }
 }
 
 // drawing the grid function
@@ -31,7 +31,7 @@ function canvas(a, b) {
     for (let i = 0; i < a; i++) {
       let newP = document.createElement(`p`);
       newP.setAttribute(`class`, `gridp`);
-      let NEWCHILD = queryselectorAll(`.container-div`).appendChild(document.createElement('p'));
+      let NEWCHILD = document.queryselectorAll(`.container-div`).appendChild(document.createElement('p'));
     }
     for (let i = 0; i < b; i++) {
       let newDiv = document.createElement(`div`);
