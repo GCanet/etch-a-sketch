@@ -46,14 +46,14 @@ function canvas(a) {
 
 // click to black and hoover gray tail
 
-
-let clickgrid = document.getElementsByClassName(`.container > div`).addEventListener(`click`, paintit);
-let hoovergrid = document.getElementsByClassName(`.container > div`).addEventListener(`hoover`, trailit);
+let divsgrid = document.getElementsByClassName(`.gridDivs`)
+let clickgrid = document.getElementsByClassName(`.gridDivs`).addEventListener(`click`, paintit);
+let hoovergrid = document.getElementsByClassName(`.gridDivs`).addEventListener(`hoover`, trailit);
 
 function paintit(e) {
-  div.style.backgroundColor = `black`;
+  divsgrid.style.backgroundColor = `black`;
 }
 
 function trailit(e) {
-  div.style.backgroundColor = `gray`;
+  divsgrid.style.backgroundColor = `gray`;
 }
