@@ -84,3 +84,11 @@ button {
     margin: 10px;
     color: white;
 }
+
+#clear {
+    margin-bottom: 50px;
+}
+
+#start {
+    margin-top: 30px;
+}
