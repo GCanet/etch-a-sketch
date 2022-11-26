@@ -3,9 +3,9 @@ let container = document.querySelector(`.container`);
 // start button
 
 let startBUTTON = document.getElementById(`start`);
-startBUTTON.addEventListener(`click`, start());
+startBUTTON.addEventListener(`click`, startagain());
 
-function start() {
+function startagain() {
   let numbers = prompt("Enter a number from 16 to 100: ", "");
   let a = numbers;
   canvas(a);
@@ -14,9 +14,9 @@ function start() {
 // clear button
 
 let clearBUTTON = document.getElementById(`clear`);
-clearBUTTON.addEventListener(`click`, clear());
+clearBUTTON.addEventListener(`click`, clearall());
 
-function clear() {
+function clearall() {
   let elements = document.getElementsByClassName(`.gridDivs`);
     for (let i = 0; i < elements.length; i++) {
       elements[i].removeChild();
