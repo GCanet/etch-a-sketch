@@ -4,7 +4,7 @@ let newchild = document.querySelectorAll(`.gridDivs`);
 // start button
 
 function start() {
-  var numbers = prompt("Enter two numbers (max: 100) separated by x: ", "");
+  var numbers = prompt("Enter two equal numbers (max value: 100) separated by x: ", "");
   let a = numbers.split("x")[0];
   let b = numbers.split("x")[1];
   canvas(a, b);
