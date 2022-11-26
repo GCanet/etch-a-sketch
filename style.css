@@ -15,7 +15,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.header {
+header {
     display: flex;
     background-color: darkgray;
     justify-content: center;
@@ -48,4 +48,6 @@ footer {
 
 .container {
     display: flex;
+    max-width: 960px;
+    max-height: 960px;
 }
