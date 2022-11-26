@@ -40,8 +40,8 @@ function canvas(a, b) {
       }
   }
   if (
-    (a > 100 || b > 100) ||
-    (a < 15 || b < 15) 
+    (a > 100 && b > 100) ||
+    (a < 15 && b < 15) 
     ){
       alert(`Number has to be lower than 100 and higher than 15.`);
   }
