@@ -2,16 +2,19 @@ let container = document.querySelector(`.container`);
 
 // start button
 
+let startBUTTON = document.getElementById(`start`);
+startBUTTON.addEventListener(`click`, start());
+
 function start() {
   let numbers = prompt("Enter a number from 16 to 100: ", "");
   let a = numbers;
   canvas(a);
 }
 
-let startBUTTON = document.getElementById(`start`).addEventListener
-(`click`, start());
-
 // clear button
+
+let clearBUTTON = document.getElementById(`clear`);
+clearBUTTON.addEventListener(`click`, clear());
 
 function clear() {
   let elements = document.getElementsByClassName(`.container`);
@@ -20,13 +23,10 @@ function clear() {
   }
 }
 
-let clearBUTTON = document.getElementById(`clear`).addEventListener
-(`click`, clear());
-
 // drawing the grid function
 
 function canvas(a) {
-  let total = (a * a) + a
+  let total = (a * a)
   let mod = a + 1;
 
   if (a < 100 || a > 15) {
@@ -48,14 +48,15 @@ function canvas(a) {
 
 // click to black and hoover gray tail
 
-let newchild = document.getElementsByClassName(`.gridDivs`);
 
-let paintgrid = newchild.addEventListener
-(`click`, () => {
-    paintgrid.style.backgroundColor = `black`;
-  });
+let grid = document.getElementsByClassName(`.container > div`);
+paintgrid.addEventListener(`click`, paintit());
+hoovergrid.addEventListener(`hoover`, trailit());
 
-let hooverdiv = newchild.addEventListener
-(`hoover`, () => {
-    hooverdiv.style.backgroundColor = `gray`;
-  });
+function paintit(e) {
+  e.target.style.backgroundColor = `black`;
+}
+
+function trailit(e) {
+  e.target.style.backgroundColor = `gray`;
+}
