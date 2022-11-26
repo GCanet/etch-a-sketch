@@ -24,11 +24,10 @@ header {
     justify-content: center;
     align-items: center;
     height: 30px;
-    max-height: 30px;
     width: 100%;
     color: black;
     font-size: 9px;
-    margin-bottom: auto;
+    margin-bottom: 50px;
     flex-shrink: 0;
 }
 
@@ -62,10 +61,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
-    background-color: white;
-    align-self: center;
+    background-color: gray;
+    justify-content: center;
     width: auto;
     height: auto;
+}
+
+.gridDivs {
+    background-color: white;
+    align-self: center;
 }
 
 main {

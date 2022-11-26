@@ -17,7 +17,7 @@ let clearBUTTON = document.getElementById(`clear`);
 clearBUTTON.addEventListener(`click`, clear());
 
 function clear() {
-  let elements = document.getElementsByClassName(`.container`);
+  let elements = document.getElementsByClassName(`.gridDivs`);
     for (let i = 0; i < elements.length; i++) {
       elements[i].removeChild();
   }
@@ -50,8 +50,8 @@ function canvas(a) {
 
 
 let grid = document.getElementsByClassName(`.container > div`);
-paintgrid.addEventListener(`click`, paintit());
-hoovergrid.addEventListener(`hoover`, trailit());
+grid.addEventListener(`click`, paintit());
+grid.addEventListener(`hoover`, trailit());
 
 function paintit(e) {
   e.target.style.backgroundColor = `black`;
