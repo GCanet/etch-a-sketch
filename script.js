@@ -11,7 +11,7 @@ newP.setAttribute(`class`, `gridp`)
 let NEWROW = document.container.appendChild(newDiv);
 let NEWCHILD = queryselectorAll(`.container > div`).appendChild(newP);
 
-// start button & clear button functions
+// start button + NEED WORK
 
 let startBUTTON = document.getElementById(`start`).addEventListener
 (`click`, start());
@@ -22,6 +22,8 @@ function start() {
   // use those to run;
   container.canvas(a, b);
 }
+
+// clear button
 
 let clear = document.getElementById(`clear`);
     clear.onclick = function(){
@@ -49,30 +51,24 @@ function canvas(a, b) {
   }
 }
 
-/* 
+// click to black and hoover gray tail
 
-document.getElementByClass(`gridDivs`).addEventListener
+let paintgrid = document.getElementByClass(`gridDivs`).addEventListener
 (`click`, () => {
-    // code to paint black
+    paintgrid.style.backgroundColor = `black`;
   });
-});
 
-document.getElementByClass(`gridp`).addEventListener
+let paintp = document.getElementByClass(`gridp`).addEventListener
 (`click`, () => {
-    // code to paint black
+    paintgrid.style.backgroundColor = `black`;
   });
-});
 
-document.getElementByClass(`gridDivs`).addEventListener
+let hooverdiv = document.getElementByClass(`gridDivs`).addEventListener
 (`hoover`, () => {
-    // code trail
+    hooverdiv.style.backgroundColor = `gray`
   });
-});
 
-document.getElementByClass(`gridp`).addEventListener
+let hooverp = document.getElementByClass(`gridp`).addEventListener
 (`hoover`, () => {
-    // code trail
+    hooverp.style.backgroundColor = `gray`
   });
-});
-
-*/
