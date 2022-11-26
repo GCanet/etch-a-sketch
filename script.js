@@ -16,10 +16,9 @@ let startBUTTON = document.getElementById(`start`).addEventListener
 // clear button
 
 function clear() {
-  var elements = document.getElementsByClassName(`.container`);
-    for (var i = 0; i < elements.length; i++) {
-
-    elements[i].removeChild();
+  let elements = document.getElementsByClassName(`.container`);
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].removeChild();
   }
 }
 
