@@ -29,17 +29,22 @@ let clearBUTTON = document.getElementById(`clear`).addEventListener
 // drawing the grid function
 
 function canvas(a, b) {
-  if (a == b) {
-    for (let i = 0; i < a; i++) {
-      document.newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
-    }
-    for (let i = 0; i < b; i++) {
-      document.container.appendChild(document.createElement(`div`)).setAttribute(`class`, `gridDivs`);
-    }
+  if (
+    (a < 100 === b < 100) ||
+    (a > 15 || b > 15) 
+    ){
+      for (let i = 0; i < a; i++) {
+        document.newchild.appendChild(document.createElement(`p`)).setAttribute(`class`, `gridp`);
+      }
+      for (let i = 0; i < b; i++) {
+        document.container.appendChild(document.createElement(`div`)).setAttribute(`class`, `gridDivs`);
+      }
   }
-  if (a > 100 || b > 100) {
-    alert(`The number needs to be lower than 100.`);
-    clear();
+  if (
+    (a > 100 || b > 100) ||
+    (a < 15 || b < 15) 
+    ){
+      alert(`Number has to be lower than 100 and higher than 15.`);
   }
 }
 
