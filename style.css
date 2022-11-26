@@ -47,7 +47,22 @@ footer {
 }
 
 .container {
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+.gridDivs {
     display: flex;
-    max-width: 960px;
-    max-height: 960px;
+    flex: 1;
+    min-width: 10px;
+    min-height: 10px;
+    flex-shrink: 0;
+}
+
+.gridp {
+    display: flex;
+    flex: 1;
+    min-width: 10px;
+    min-height: 10px;
+    flex-shrink: 0;
 }
