@@ -10,17 +10,6 @@ function startagain() {
   canvas(a);
 }
 
-// clear button
-
-let clearBUTTON = document.getElementById(`clear`).addEventListener(`click`, clearall);
-
-function clearall() {
-  let elements = document.getElementsByClassName(`.gridDivs`);
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].removeChild();
-  }
-}
-
 // drawing the grid function
 
 function canvas(a) {
@@ -37,6 +26,9 @@ function canvas(a) {
           div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
         }
         container.appendChild(div).setAttribute(`class`, `gridDivs`);
+        div.innerHTML = "";
+        div.addEventListener("click", paintit);
+        div.addEventListener("mouseover", trailit);
       }
   if (a > 100 || a < 15) {
       alert(`Number has to be lower than 100 and higher than 15.`);
@@ -46,14 +38,22 @@ function canvas(a) {
 
 // click to black and hoover gray tail
 
-let divsgrid = document.getElementsByClassName(`.gridDivs`)
-let clickgrid = document.getElementsByClassName(`.gridDivs`).addEventListener(`click`, paintit);
-let hoovergrid = document.getElementsByClassName(`.gridDivs`).addEventListener(`hoover`, trailit);
-
 function paintit(e) {
-  divsgrid.style.backgroundColor = `black`;
+  e.target.style.backgroundColor = `#000`;
 }
 
 function trailit(e) {
-  divsgrid.style.backgroundColor = `gray`;
+  e.target.style.backgroundColor = `gray`;
+  e.target.style.opacity = (parseFloat(this.style.opacity) || 0) + 0.2;
+}
+
+// clear button
+
+let clearBUTTON = document.getElementById(`clear`).addEventListener(`click`, clearall);
+let elements = document.getElementsByClassName(`container > div`);
+
+function clearall() {
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].removeChild();
+  }
 }
