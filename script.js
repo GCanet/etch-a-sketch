@@ -1,15 +1,4 @@
-// declaring variables for creating elements later
-
 let container = document.querySelector(`.container`);
-
-let newDiv = document.createElement(`div`);
-newDiv.setAttribute(`class`, `gridDivs`);
-
-let newP = document.createElement(`p`);
-newP.setAttribute(`class`, `gridp`);
-
-let NEWROW = document.container.appendChild(newDiv);
-let NEWCHILD = queryselectorAll(`.container > div`).appendChild(newP);
 
 // start button
 
@@ -18,7 +7,7 @@ let startBUTTON = document.getElementById(`start`).addEventListener
 
 function start() {
   clear();
-  var numbers = prompt("Enter two numbers separated by x: ", "");
+  var numbers = prompt("Enter two numbers (max: 100) separated by x: ", "");
   let a = numbers.split("x")[0];
   let b = numbers.split("x")[1];
   canvas(a, b);
@@ -40,10 +29,14 @@ clear.onclick = function clear(){
 function canvas(a, b) {
   if (a == b) {
     for (let i = 0; i < a; i++) {
-      NEWCHILD++;
+      let newP = document.createElement(`p`);
+      newP.setAttribute(`class`, `gridp`);
+      let NEWCHILD = queryselectorAll(`.container-div`).appendChild(document.createElement('p'));
     }
     for (let i = 0; i < b; i++) {
-      NEWROW++;
+      let newDiv = document.createElement(`div`);
+      newDiv.setAttribute(`class`, `gridDivs`);
+      let NEWROW = document.container.appendChild(document.createElement('div'));
     }
   }
   if (a > 100 || b > 100) {
