@@ -2,8 +2,7 @@ let container = document.querySelector(`.container`);
 
 // start button
 
-let startBUTTON = document.getElementById(`start`);
-startBUTTON.addEventListener(`click`, startagain());
+let startBUTTON = document.getElementById(`start`).addEventListener(`click`, startagain);
 
 function startagain() {
   let numbers = prompt("Enter a number from 16 to 100: ", "");
@@ -13,8 +12,7 @@ function startagain() {
 
 // clear button
 
-let clearBUTTON = document.getElementById(`clear`);
-clearBUTTON.addEventListener(`click`, clearall());
+let clearBUTTON = document.getElementById(`clear`).addEventListener(`click`, clearall);
 
 function clearall() {
   let elements = document.getElementsByClassName(`.gridDivs`);
@@ -49,14 +47,13 @@ function canvas(a) {
 // click to black and hoover gray tail
 
 
-let grid = document.getElementsByClassName(`.container > div`);
-grid.addEventListener(`click`, paintit());
-grid.addEventListener(`hoover`, trailit());
+let clickgrid = document.getElementsByClassName(`.container > div`).addEventListener(`click`, paintit);
+let hoovergrid = document.getElementsByClassName(`.container > div`).addEventListener(`hoover`, trailit);
 
 function paintit(e) {
-  e.target.style.backgroundColor = `black`;
+  div.style.backgroundColor = `black`;
 }
 
 function trailit(e) {
-  e.target.style.backgroundColor = `gray`;
+  div.style.backgroundColor = `gray`;
 }
