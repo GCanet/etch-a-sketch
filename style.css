@@ -64,29 +64,27 @@ body {
     justify-content: center;
 }
 
-.gridDivs {
-    background-color: white;
-    align-self: center;
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-button {
-    align-self: center;
+#clear {
+    flex: 1;
+    margin-bottom: 50px;
+    justify-content: center;
     width: 150px;
-    height: 40px;
     margin: 10px;
     color: white;
-}
-
-#clear {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 #start {
+    flex: 1;
     margin-top: 30px;
+    justify-content: center;
+    width: 150px;
+    margin: 10px;
+    color: white;
 }
