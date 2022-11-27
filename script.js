@@ -52,7 +52,7 @@ function trailit(e) {
 let clearBUTTON = document.getElementById(`clear`).addEventListener(`click`, clearall);
 
 function clearall() {
-    for (let i = 0; i < 2000; i++) {
-      container[i].removeChild();
+  while (container.firstChild) {
+      container.removeChild(container.lastChild);
   }
 }
