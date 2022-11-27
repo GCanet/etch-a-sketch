@@ -24,11 +24,12 @@ function canvas(a) {
           div.style.cssText = "border: 1px solid black";
         } else {
           div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
+          div.style.backgroundColor = "white"
         }
         container.appendChild(div).setAttribute(`class`, `gridDivs`);
         div.innerHTML = "";
-        div.addEventListener("click", paintit);
-        div.addEventListener("mouseover", trailit);
+        div.addEventListener(`click`, paintit);
+        div.addEventListener(`mouseover`, trailit);
       }
   if (a > 100 || a < 15) {
       alert(`Number has to be lower than 100 and higher than 15.`);
@@ -44,16 +45,14 @@ function paintit(e) {
 
 function trailit(e) {
   e.target.style.backgroundColor = `gray`;
-  e.target.style.opacity = (parseFloat(this.style.opacity) || 0) + 0.2;
 }
 
 // clear button
 
 let clearBUTTON = document.getElementById(`clear`).addEventListener(`click`, clearall);
-let elements = document.getElementsByClassName(`container > div`);
 
 function clearall() {
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].removeChild();
+    for (let i = 0; i < 2000; i++) {
+      container[i].removeChild();
   }
 }
