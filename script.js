@@ -1,10 +1,12 @@
 let container = document.querySelector(`.container`);
+canvas(16);
 
 // start button
 
 let startBUTTON = document.getElementById(`start`).addEventListener(`click`, startagain);
 
 function startagain() {
+  container.innerHTML = '';
   let numbers = prompt(`Enter a number from 16 to 100: `);
   let a = numbers;
   canvas(a);
