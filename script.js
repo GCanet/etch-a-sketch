@@ -49,5 +49,5 @@ let clearBUTTON = document.getElementById(`clear`).addEventListener(`click`, cle
 
 function clearall() {
     container.innerHTML = '';
-    canvas(a);
+    canvas(16);
   }
